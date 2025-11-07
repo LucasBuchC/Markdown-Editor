@@ -56,11 +56,17 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4a7ba7 0%, #5c8fb8 50%, #6fb1d9 100%);
   border-radius: 12px;
   color: white;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 4px 12px rgba(74, 123, 167, 0.3);
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(74, 123, 167, 0.4);
 }
 
 .stat-icon {
@@ -134,7 +140,7 @@
 
 .bar-fill {
   width: 100%;
-  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(180deg, #4a7ba7 0%, #6fb1d9 100%);
   transition: height 0.3s ease;
 }
 
@@ -220,9 +226,13 @@
 .ranking-number {
   font-size: 16px;
   font-weight: 700;
-  color: #667eea;
+  color: #4a7ba7;
   min-width: 32px;
   text-align: center;
+}
+
+.dark .ranking-number {
+  color: #6fb1d9;
 }
 
 .ranking-info {
@@ -254,9 +264,13 @@
 .ranking-edits {
   font-size: 14px;
   font-weight: 700;
-  color: #667eea;
+  color: #4a7ba7;
   min-width: 32px;
   text-align: right;
+}
+
+.dark .ranking-edits {
+  color: #6fb1d9;
 }
 
 .empty {
@@ -284,7 +298,7 @@
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
-  background: #667eea;
+  background: linear-gradient(135deg, #4a7ba7 0%, #5c8fb8 100%);
   color: white;
   font-weight: 600;
   cursor: pointer;
@@ -292,7 +306,9 @@
 }
 
 .btn-close:hover {
-  background: #5568d3;
+  background: linear-gradient(135deg, #3d6692 0%, #4a7ba7 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 123, 167, 0.4);
 }
 
 @media (max-width: 768px) {
