@@ -1,0 +1,183 @@
+.github-login {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark .github-login {
+  background: #2d2d2d;
+}
+
+.btn-login-github {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #24292e;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.btn-login-github:hover {
+  background: #1a1f26;
+  transform: translateY(-2px);
+}
+
+.github-login.authenticated {
+  justify-content: space-between;
+}
+
+.github-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.github-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #667eea;
+}
+
+.github-user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.github-username {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.dark .github-username {
+  color: #fff;
+}
+
+.github-status {
+  font-size: 12px;
+  color: #999;
+}
+
+.dark .github-status {
+  color: #aaa;
+}
+
+.btn-logout {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #f44336;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 12px;
+}
+
+.btn-logout:hover {
+  background: #d32f2f;
+}
+
+.github-token-input {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.token-input {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.dark .token-input {
+  background: #3a3a3a;
+  border-color: #555;
+  color: #fff;
+}
+
+.token-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-token-submit,
+.btn-token-cancel {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 13px;
+}
+
+.btn-token-submit {
+  background: #24292e;
+  color: white;
+}
+
+.btn-token-submit:hover:not(:disabled) {
+  background: #1a1f26;
+}
+
+.btn-token-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-token-cancel {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.btn-token-cancel:hover {
+  background: #e0e0e0;
+}
+
+.token-help {
+  margin: 0;
+  font-size: 12px;
+  color: #999;
+  line-height: 1.5;
+}
+
+.dark .token-help {
+  color: #aaa;
+}
+
+.token-help a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.token-help a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .github-login {
+    padding: 10px 12px;
+  }
+
+  .github-token-input {
+    max-width: 100%;
+  }
+
+  .btn-login-github {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}

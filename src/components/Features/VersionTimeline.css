@@ -1,0 +1,228 @@
+.version-timeline-content {
+  background: white;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+.dark .version-timeline-content {
+  background: #2d2d2d;
+}
+
+.timeline-header {
+  position: relative;
+  padding: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.dark .timeline-header {
+  border-bottom-color: #444;
+}
+
+.timeline-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 22px;
+  color: #333;
+}
+
+.dark .timeline-header h2 {
+  color: #fff;
+}
+
+.version-count {
+  margin: 0;
+  font-size: 13px;
+  color: #999;
+}
+
+.dark .version-count {
+  color: #aaa;
+}
+
+.timeline-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.no-versions {
+  text-align: center;
+  color: #999;
+  padding: 60px 20px;
+}
+
+.no-versions p {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.dark .no-versions p {
+  color: #fff;
+}
+
+.versions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.version-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dark .version-item {
+  background: #3a3a3a;
+}
+
+.version-item:hover {
+  background: #efefef;
+}
+
+.dark .version-item:hover {
+  background: #444;
+}
+
+.version-item.active {
+  background: #e3f2fd;
+  border-left: 4px solid #667eea;
+}
+
+.dark .version-item.active {
+  background: rgba(102, 126, 234, 0.2);
+  border-left-color: #667eea;
+}
+
+.version-marker {
+  font-size: 20px;
+  color: #667eea;
+  min-width: 24px;
+  text-align: center;
+}
+
+.version-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.version-time {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.dark .version-time {
+  color: #fff;
+}
+
+.version-size {
+  font-size: 12px;
+  color: #999;
+  background: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.dark .version-size {
+  background: #2d2d2d;
+  color: #aaa;
+}
+
+.badge-latest {
+  background: #4caf50;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.version-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-restore-mini,
+.btn-delete-mini {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .btn-restore-mini,
+.dark .btn-delete-mini {
+  color: #aaa;
+}
+
+.btn-restore-mini:hover {
+  background: #667eea;
+  color: white;
+}
+
+.btn-delete-mini:hover {
+  background: #f44336;
+  color: white;
+}
+
+.timeline-footer {
+  padding: 16px;
+  border-top: 1px solid #eee;
+}
+
+.dark .timeline-footer {
+  border-top-color: #444;
+}
+
+.btn-restore-full {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-restore-full:hover {
+  background: #5568d3;
+}
+
+@media (max-width: 768px) {
+  .version-timeline-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .timeline-header {
+    padding: 16px;
+  }
+
+  .timeline-body {
+    padding: 12px;
+  }
+}

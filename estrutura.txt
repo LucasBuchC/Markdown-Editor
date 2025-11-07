@@ -1,0 +1,33 @@
+.
+├── README.md
+├── eslint.config.js
+├── estrutura.txt
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   └── vite.svg
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets
+│   │   └── react.svg
+│   ├── components
+│   │   ├── Editor
+│   │   ├── Features
+│   │   ├── Layout
+│   │   └── Preview
+│   ├── hooks
+│   │   ├── useKeyboardShortcuts.js
+│   │   ├── useLocalStorage.js
+│   │   └── useMarkdown.js
+│   ├── index.css
+│   ├── main.jsx
+│   └── utils
+│       ├── exportFunctions.js
+│       ├── markdownParser.js
+│       ├── templates.js
+│       └── textStats.js
+└── vite.config.js
+
+11 directories, 20 files
