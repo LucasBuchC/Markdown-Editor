@@ -5,10 +5,32 @@
   background: white;
   border-bottom: 2px solid #e0e0e0;
   overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   margin-bottom: 8px;
   border-radius: 8px 8px 0 0;
+  min-height: 50px;
   max-height: 50px;
+  scrollbar-width: thin;
+  scrollbar-color: #4a7ba7 #e6f0f8;
+}
+
+.document-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.document-tabs::-webkit-scrollbar-track {
+  background: #e6f0f8;
+  border-radius: 2px;
+}
+
+.document-tabs::-webkit-scrollbar-thumb {
+  background: #4a7ba7;
+  border-radius: 2px;
+}
+
+.document-tabs::-webkit-scrollbar-thumb:hover {
+  background: #3d6692;
 }
 
 .dark .document-tabs {
@@ -30,6 +52,8 @@
   flex-shrink: 0;
   position: relative;
   font-size: 13px;
+  min-height: 36px;
+  max-height: 36px;
 }
 
 .dark .tab {
@@ -59,16 +83,21 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  overflow: visible;
+  min-width: 0;
 }
 
 .tab-title {
-  max-width: 120px;
+  max-width: 150px;
+  min-width: 60px;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 13px;
   font-weight: 500;
   color: #333;
   cursor: text;
+  display: block;
+  line-height: 1.2;
 }
 
 .dark .tab-title {
@@ -95,16 +124,19 @@
 
 .tab-rename-input {
   padding: 4px 6px;
-  border: 2px solid #667eea;
+  border: 2px solid #4a7ba7;
   border-radius: 4px;
-  font-size: 14px;
-  width: 120px;
+  font-size: 13px;
+  width: 140px;
+  background: white;
+  color: #333;
+  outline: none;
 }
 
 .dark .tab-rename-input {
   background: #3a3a3a;
   color: #fff;
-  border-color: #667eea;
+  border-color: #6fb1d9;
 }
 
 .tab-close {
