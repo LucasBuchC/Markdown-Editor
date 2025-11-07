@@ -309,7 +309,7 @@ function App() {
 
       <header className="header">
         <div className="header-left">
-          <h1>📝 Markdown Editor Pro</h1>
+          <h1>Markdown Editor Pro</h1>
           <span className="badge">Fase 9</span>
         </div>
         <div className="header-actions">

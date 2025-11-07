@@ -3,9 +3,9 @@ import './EditorTabs.css';
 
 const EditorTabs = ({ activeTab, onTabChange }) => {
   const tabs = [
-    { id: 'markdown', label: '📝 Markdown', icon: '📝' },
-    { id: 'html', label: '🌐 HTML', icon: '🌐' },
-    { id: 'css', label: '🎨 CSS', icon: '🎨' },
+    { id: 'markdown', label: 'Markdown', icon: '📝' },
+    { id: 'html', label: 'HTML', icon: '🌐' },
+    { id: 'css', label: 'CSS', icon: '🎨' },
   ];
 
   return (
