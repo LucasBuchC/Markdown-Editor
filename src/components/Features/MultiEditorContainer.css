@@ -99,6 +99,26 @@
   min-height: 500px !important;
 }
 
+.markdown-editor .w-md-editor-text-pre,
+.markdown-editor .w-md-editor-text-input {
+  color: #1a3a52 !important;
+}
+
+.dark .markdown-editor .w-md-editor-text-pre,
+.dark .markdown-editor .w-md-editor-text-input {
+  color: #e8f0fe !important;
+}
+
+.markdown-editor .w-md-editor-toolbar {
+  background: #f8fbfe !important;
+  border-bottom: 1px solid #e6f0f8 !important;
+}
+
+.dark .markdown-editor .w-md-editor-toolbar {
+  background: #1a2a47 !important;
+  border-bottom-color: #2d4a6f !important;
+}
+
 .html-css-tab {
   gap: 15px;
   min-height: 600px;
