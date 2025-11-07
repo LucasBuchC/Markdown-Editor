@@ -1,0 +1,222 @@
+.multi-editor-container {
+  width: 100%;
+  height: 100%;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tab-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 600px;
+  height: auto;
+  overflow: visible;
+}
+
+.markdown-tab {
+  gap: 15px;
+  min-height: 600px;
+  height: auto;
+}
+
+.markdown-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 5px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.dark .markdown-controls {
+  background: rgba(26, 42, 71, 0.95);
+}
+
+.markdown-controls button {
+  padding: 10px 16px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a3a52;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: clamp(12px, 2vw, 14px);
+  flex: 1 1 auto;
+  min-width: 80px;
+}
+
+.dark .markdown-controls button {
+  background: rgba(26, 42, 71, 0.95);
+  color: #e8f0fe;
+}
+
+.markdown-controls button:hover {
+  border-color: #4a7ba7;
+  background: #e6f0f8;
+  transform: translateY(-2px);
+}
+
+.dark .markdown-controls button:hover {
+  background: #2d4a6f;
+}
+
+.markdown-controls button.active {
+  background: linear-gradient(135deg, #4a7ba7 0%, #5c8fb8 100%);
+  color: white;
+  border-color: #5c8fb8;
+}
+
+.markdown-editor {
+  flex: 1 1 auto;
+  min-height: 550px;
+  height: auto;
+  overflow: visible;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.markdown-editor .w-md-editor {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 550px !important;
+  border-radius: 12px;
+  flex: 1 1 auto !important;
+}
+
+.markdown-editor .w-md-editor-text,
+.markdown-editor .w-md-editor-preview {
+  min-height: 500px !important;
+}
+
+.html-css-tab {
+  gap: 15px;
+  min-height: 600px;
+  height: auto;
+}
+
+.split-pane {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 580px;
+  height: auto;
+  overflow: visible;
+}
+
+.editors-section,
+.preview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 580px;
+  height: auto;
+  overflow: visible;
+}
+
+.editor-split {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 550px;
+  height: auto;
+  overflow: hidden;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .editor-split {
+  background: #1a2a47;
+}
+
+.editor-label {
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #4a7ba7 0%, #5c8fb8 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 12px 12px 0 0;
+  text-transform: uppercase;
+}
+
+.toggle-preview {
+  padding: 10px 16px;
+  border: 2px solid #4a7ba7;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a3a52;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: clamp(12px, 2vw, 14px);
+  flex-shrink: 0;
+}
+
+.dark .toggle-preview {
+  background: rgba(26, 42, 71, 0.95);
+  color: #e8f0fe;
+  border-color: #6fb1d9;
+}
+
+.toggle-preview:hover {
+  background: #e6f0f8;
+  transform: translateY(-2px);
+}
+
+.dark .toggle-preview:hover {
+  background: #2d4a6f;
+}
+
+.toggle-preview.active {
+  background: linear-gradient(135deg, #4a7ba7 0%, #5c8fb8 100%);
+  color: white;
+  border-color: #5c8fb8;
+}
+
+@media (max-width: 1024px) {
+  .split-pane {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-section {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .markdown-controls,
+  .markdown-controls button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .split-pane {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .markdown-controls button {
+    padding: 8px 6px;
+    font-size: 10px;
+  }
+
+  .toggle-preview {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+}

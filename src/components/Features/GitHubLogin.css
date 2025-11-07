@@ -1,11 +1,13 @@
 .github-login {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
+  gap: 10px;
+  padding: 8px 12px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 8px;
+  max-height: 55px;
 }
 
 .dark .github-login {
@@ -13,7 +15,7 @@
 }
 
 .btn-login-github {
-  padding: 10px 16px;
+  padding: 8px 14px;
   border: none;
   border-radius: 8px;
   background: #24292e;
@@ -21,7 +23,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .btn-login-github:hover {
@@ -36,12 +38,12 @@
 .github-user-info {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .github-avatar {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   border: 2px solid #667eea;
 }
@@ -52,7 +54,7 @@
 }
 
 .github-username {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: #333;
 }
@@ -62,7 +64,7 @@
 }
 
 .github-status {
-  font-size: 12px;
+  font-size: 11px;
   color: #999;
 }
 

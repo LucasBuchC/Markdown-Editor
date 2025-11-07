@@ -1,0 +1,120 @@
+.code-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dark .code-toolbar {
+  background: rgba(26, 42, 71, 0.98);
+}
+
+.toolbar-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a3a52;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e6f0f8;
+}
+
+.dark .toolbar-label {
+  color: #b3d9ff;
+  border-bottom-color: #2d4a6f;
+}
+
+.toolbar-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.toolbar-btn {
+  padding: 6px 12px;
+  border: 1px solid #d0e4f7;
+  border-radius: 6px;
+  background: #f8fbfe;
+  color: #1a3a52;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.dark .toolbar-btn {
+  background: #2d4a6f;
+  color: #b3d9ff;
+  border-color: #3d5a7f;
+}
+
+.toolbar-btn:hover {
+  background: linear-gradient(135deg, #4a7ba7 0%, #5c8fb8 100%);
+  color: white;
+  border-color: #5c8fb8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(74, 123, 167, 0.3);
+}
+
+.dark .toolbar-btn:hover {
+  background: linear-gradient(135deg, #5c8fb8 0%, #6fb1d9 100%);
+  border-color: #6fb1d9;
+}
+
+.toolbar-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(74, 123, 167, 0.2);
+}
+
+/* Scrollbar para toolbar */
+.code-toolbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.code-toolbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+.code-toolbar::-webkit-scrollbar-thumb {
+  background: #4a7ba7;
+  border-radius: 3px;
+}
+
+.dark .code-toolbar::-webkit-scrollbar-thumb {
+  background: #6fb1d9;
+}
+
+@media (max-width: 768px) {
+  .code-toolbar {
+    max-height: 150px;
+    padding: 8px;
+  }
+
+  .toolbar-label {
+    font-size: 12px;
+  }
+
+  .toolbar-btn {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .code-toolbar {
+    max-height: 120px;
+    padding: 6px;
+  }
+
+  .toolbar-btn {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+}

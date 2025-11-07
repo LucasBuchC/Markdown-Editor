@@ -5,6 +5,7 @@ import { useKeyboardShortcuts } from './hooks/useKeyboardShortcuts';
 import { useDocuments } from './hooks/useDocuments';
 import { useVersionHistory } from './hooks/useVersionHistory';
 import { useAnalytics } from './hooks/useAnalytics';
+import { useEditorTabs } from './hooks/useEditorTabs';
 import { calculateStats } from './utils/textStats';
 import { exportToPDF, exportToHTML, generateFilename } from './utils/exportFunctions';
 import { createGist, updateGist } from './utils/githubAPI';
@@ -21,6 +22,7 @@ import KeywordsCloud from './components/Features/KeywordsCloud';
 import Dashboard from './components/Features/Dashboard';
 import TableOfContents from './components/Features/TableOfContents';
 import SearchReplace from './components/Features/SearchReplace';
+import MultiEditorContainer from './components/Features/MultiEditorContainer';
 import './App.css';
 
 function App() {
@@ -39,6 +41,16 @@ function App() {
   const activeDoc = getActiveDocument();
   
   const [localMarkdown, setLocalMarkdown] = useState(activeDoc?.content || '');
+  const {
+    activeTab,
+    markdownContent,
+    htmlContent,
+    cssContent,
+    updateMarkdown,
+    updateHtml,
+    updateCss,
+    switchTab,
+  } = useEditorTabs();
 
   useEffect(() => {
     if (activeDoc) {
@@ -415,37 +427,15 @@ function App() {
         </div>
       </div>
 
-      <div className="preview-controls">
-        <button 
-          className={previewMode === 'edit' ? 'active' : ''}
-          onClick={() => setPreviewMode('edit')}
-        >
-          ✏️ Editor
-        </button>
-        <button 
-          className={previewMode === 'live' ? 'active' : ''}
-          onClick={() => setPreviewMode('live')}
-        >
-          👁️ Split
-        </button>
-        <button 
-          className={previewMode === 'preview' ? 'active' : ''}
-          onClick={() => setPreviewMode('preview')}
-        >
-          📖 Preview
-        </button>
-      </div>
-
-      <div className="editor-container" ref={previewRef}>
-        <MDEditor
-          value={localMarkdown}
-          onChange={handleMarkdownChange}
-          preview={previewMode}
-          height="auto"
-          commands={customCommands}
-          enableScroll={true}
-          highlightEnable={true}
-          visibleDragbar={true}
+      <div className="editor-wrapper">
+        <MultiEditorContainer
+          theme={theme}
+          onMarkdownChange={handleMarkdownChange}
+          onHtmlChange={updateHtml}
+          onCssChange={updateCss}
+          markdownContent={localMarkdown}
+          htmlContent={htmlContent}
+          cssContent={cssContent}
         />
       </div>
 
